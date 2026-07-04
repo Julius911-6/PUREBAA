@@ -1,60 +1,57 @@
-
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-brand-dark text-brand-light py-12 border-t-4 border-brand-earth">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-brand-dark text-brand-light py-12 border-t-4 border-brand-accent mt-auto">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Brand Info */}
-        <div className="col-span-1 md:col-span-2">
+        <div className="col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <img src="/logo.jpeg" alt="Tomas Cruz & Sons Logo" className="h-12 w-12 object-cover rounded-full bg-brand-white p-1" />
-            <h2 className="text-xl font-bold tracking-wider text-brand-white uppercase">Tomas Cruz & Sons</h2>
+             <div className="bg-brand-white text-brand-dark font-bold text-xl h-10 w-10 flex items-center justify-center rounded">
+              PD
+            </div>
+            <h2 className="text-xl font-bold tracking-wider text-brand-white">PRODEHBOL</h2>
           </div>
-          <p className="text-sm text-brand-gray-300 mb-6 max-w-md leading-relaxed text-gray-400">
-            Especialistas en expediciones VIP por el Salar de Uyuni y desiertos de Bolivia. Confianza, seguridad y exclusividad con 3 generaciones de experiencia.
+          <p className="text-sm text-brand-border mb-6 leading-relaxed">
+            Asociación civil sin fines de lucro conformada por ciudadanos comprometidos con la promoción, defensa y vigencia de los derechos humanos en el Estado Plurinacional de Bolivia.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="text-brand-light hover:text-brand-terracotta transition-colors">Facebook</a>
-            <a href="#" className="text-brand-light hover:text-brand-terracotta transition-colors">Instagram</a>
-            <a href="#" className="text-brand-light hover:text-brand-terracotta transition-colors">Twitter</a>
-          </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-bold mb-4 text-brand-sand">Enlaces Rápidos</h3>
-          <ul className="space-y-2 text-sm text-gray-400">
-            <li><a href="#destinations" className="hover:text-brand-terracotta transition-colors">Nuestros Destinos</a></li>
-            <li><a href="#professionals" className="hover:text-brand-terracotta transition-colors">Personal VIP</a></li>
-            <li><a href="#about" className="hover:text-brand-terracotta transition-colors">Sobre Nosotros</a></li>
-            <li><a href="#book" className="hover:text-brand-terracotta transition-colors">Reservas</a></li>
+          <h3 className="text-lg font-bold mb-4 text-brand-accent border-b border-brand-secondary inline-block pb-1">Enlaces</h3>
+          <ul className="space-y-2 text-sm text-brand-border">
+            <li><Link to="/" className="hover:text-brand-accent transition-colors">Inicio</Link></li>
+            <li><Link to="/quienes-somos" className="hover:text-brand-accent transition-colors">Quiénes Somos</Link></li>
+            <li><Link to="/lineas-de-accion" className="hover:text-brand-accent transition-colors">Líneas de Acción</Link></li>
+            <li><Link to="/contacto" className="hover:text-brand-accent transition-colors">Contacto</Link></li>
           </ul>
         </div>
 
         {/* Contact */}
         <div>
-          <h3 className="text-lg font-bold mb-4 text-brand-sand">Contacto</h3>
-          <ul className="space-y-3 text-sm text-gray-400">
-            <li className="flex items-start gap-2">
-              <MapPin size={18} className="text-brand-terracotta flex-shrink-0 mt-0.5" />
-              <span>Av. Ferroviaria, Uyuni, Bolivia</span>
+          <h3 className="text-lg font-bold mb-4 text-brand-accent border-b border-brand-secondary inline-block pb-1">Contacto</h3>
+          <ul className="space-y-3 text-sm text-brand-border">
+            <li className="flex items-start gap-3">
+              <MapPin size={18} className="text-brand-accent flex-shrink-0 mt-0.5" />
+              <span>Calle Donoso Torrez # 3,<br />Zona Bajo San Isidro<br />La Paz, Bolivia</span>
             </li>
-            <li className="flex items-center gap-2">
-              <Phone size={18} className="text-brand-terracotta flex-shrink-0" />
-              <span>+591 7123 4567</span>
+            <li className="flex items-center gap-3">
+              <Phone size={18} className="text-brand-accent flex-shrink-0" />
+              <span>+591 (Aquí número de contacto)</span>
             </li>
-            <li className="flex items-center gap-2">
-              <Mail size={18} className="text-brand-terracotta flex-shrink-0" />
-              <span>vip@tomascruz.com</span>
+            <li className="flex items-center gap-3">
+              <Mail size={18} className="text-brand-accent flex-shrink-0" />
+              <span>contacto@prodehbol.org</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 mt-12 pt-6 border-t border-brand-gray text-center text-xs text-gray-500">
-        &copy; {new Date().getFullYear()} Tomas Cruz & Sons - Expediciones VIP. Todos los derechos reservados.
+      <div className="container mx-auto px-4 mt-12 pt-6 border-t border-brand-secondary text-center text-xs text-brand-border">
+        &copy; {new Date().getFullYear()} PRODEHBOL - Pro Derechos Humanos Bolivia. Todos los derechos reservados.
       </div>
     </footer>
   );

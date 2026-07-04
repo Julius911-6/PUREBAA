@@ -8,14 +8,13 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: '#1c1c1c', // Vehicles and VIP elegance
-          gray: '#333333',
-          light: '#f5f5f5', // Salar
-          white: '#ffffff',
-          earth: '#8B5A2B', // Earth tones
-          sand: '#C2B280',
-          terracotta: '#E2725B', // Contrast
-          andeanBlue: '#005A8C' // Andean blue
+          primary: '#1E3A8A', // Deep Blue - Formal and Trustworthy
+          secondary: '#334155', // Slate - Serious, readable text
+          accent: '#0EA5E9', // Light Blue - Interactive elements
+          light: '#F8FAFC', // Off-white backgrounds
+          white: '#FFFFFF',
+          dark: '#0F172A', // Very dark slate for footers/headers
+          border: '#E2E8F0', // Light borders
         }
       },
       fontFamily: {
